@@ -1,0 +1,20 @@
+{
+  "name": "ecommerce-application-using-node",
+  "version": "1.0.0",
+  "description": "An ecommerce application using nodejs, mongo, and RESTAPI",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Nodejs",
+    "REST-API",
+    "Mongod"
+  ],
+  "author": "Kaustubh Vinzanekar",
+  "license": "ISC",
+  "dependencies": {
+    "underscore": "^1.8.3",
+    "mongodb" : "2.0.35"
+  }
+}
