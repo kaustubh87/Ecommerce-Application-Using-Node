@@ -22,13 +22,15 @@ exports.insert = function(db, doc, callback) {
  */
 exports.byDirector = function(db, director, callback) {
   // TODO: implement
-
-    db.collection('movies').find('director').toArray(function(error, director){
+    var query = {
+      director: director
+    };
+    db.collection('movies').find(query).sort({'title':1}).toArray(function(error, documents){
 
         if(error){
           console.log(error);
         }
-        console.log(director);
+        console.log(documents);
 
     });
 
