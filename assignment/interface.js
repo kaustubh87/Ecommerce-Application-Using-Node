@@ -5,12 +5,13 @@ exports.insert = function(db, doc, callback) {
   // TODO: implement
 
   db.collection('movies').insert(doc, function(error, result){
-    if(error){
+    if(error)
+    {
       throw error;
     }
-      console.log(result);
+    console.log(result);
   });
-
+  callback(null);
 };
 
 /*
@@ -21,5 +22,15 @@ exports.insert = function(db, doc, callback) {
  */
 exports.byDirector = function(db, director, callback) {
   // TODO: implement
+
+    db.collection('movies').find('director').toArray(function(error, director){
+
+        if(error){
+          console.log(error);
+        }
+        console.log(director);
+
+    });
+
   callback(null, []);
 };
