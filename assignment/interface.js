@@ -25,7 +25,7 @@ exports.byDirector = function(db, director, callback) {
     var query = {
       director: director
     };
-    db.collection('movies').find(query).sort({'title':1}).toArray(function(error, documents){
+    db.collection('movies').find(query).toArray(function(error, documents){
 
         if(error){
           console.log(error);
