@@ -35,6 +35,20 @@ module.exports = function(wagner){
 
     return api;
 
+    api.get('/product/id/:id', wagner.invoke(function(Product){
+        return function(req,res){
+            Product.findOne({_id: req.params.id},
+              handleOne.bind(null, 'product', res));
+        };
+
+
+    }));
+
+
+
+
+
+
 
 
 }
