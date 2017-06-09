@@ -40,14 +40,7 @@ module.exports = function(wagner){
             Product.findOne({_id: req.params.id},
               handleOne.bind(null, 'product', res));
         };
-
-
     }));
-
-
-
-
-
 
 
 
